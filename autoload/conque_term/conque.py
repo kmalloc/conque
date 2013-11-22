@@ -970,7 +970,7 @@ class Conque:
 
     def abort(self):
         """ Forcefully end the process running in the terminal. """
-        self.proc.signal(1)
+        self.proc.abort()
 
     ###############################################################################################
     # Utility 

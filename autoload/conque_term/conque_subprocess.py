@@ -154,6 +154,11 @@ class ConqueSubprocess:
         except:
             pass
 
+    def abort(self):
+
+        self.signal(6)
+        os.waitpid(self.pid, 0)
+
     def close(self):
         """ Close process with sigterm signal """
 
